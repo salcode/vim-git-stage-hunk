@@ -1,3 +1,7 @@
+" vim-git-stage-hunk - Helper for staging git diff hunks.
+" Last Change:  2021-03-16
+" Maintainer:   Sal Ferrarello <https://salcode.com/>
+
 function! s:UnAddLine()
 	" Store current position
 	let position = winsaveview()
