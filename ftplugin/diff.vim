@@ -76,7 +76,9 @@ function! s:GitHunkToggle()
 	endif
 endfunction
 
-command! -nargs=0 GitHunkToggle call s:GitHunkToggle()
+if !exists(":GitHunkToggle")
+	command! -nargs=0 GitHunkToggle call s:GitHunkToggle()
+endif
 
 if !hasmapto(':GitHunkToggle<CR>', 'n')
 	nnoremap <buffer> <Space><Space> :GitHunkToggle<CR>
