@@ -78,7 +78,9 @@ endfunction
 
 command! -nargs=0 GitHunkToggle call s:GitHunkToggle()
 
-nnoremap <buffer> <Space><Space> :GitHunkToggle<CR>
+if !hasmapto(':GitHunkToggle<CR>', 'n')
+	nnoremap <buffer> <Space><Space> :GitHunkToggle<CR>
+endif
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
