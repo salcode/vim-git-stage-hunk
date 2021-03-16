@@ -2,6 +2,11 @@
 " Last Change:  2021-03-16
 " Maintainer:   Sal Ferrarello <https://salcode.com/>
 
+if exists("g:loaded_git_stage_hunk")
+  finish
+endif
+let g:loaded_git_stage_hunk = 1
+
 let s:save_cpo = &cpo
 set cpo&vim
 
