@@ -2,6 +2,9 @@
 " Last Change:  2021-03-16
 " Maintainer:   Sal Ferrarello <https://salcode.com/>
 
+let s:save_cpo = &cpo
+set cpo&vim
+
 function! s:UnAddLine()
 	" Store current position
 	let position = winsaveview()
@@ -69,3 +72,6 @@ function! s:GitHunkToggle()
 endfunction
 
 command! -nargs=0 GitHunkToggle call s:GitHunkToggle()
+
+let &cpo = s:save_cpo
+unlet s:save_cpo
