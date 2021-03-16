@@ -43,6 +43,16 @@ function! s:DeleteLine()
 	execute "normal 0r-"
 endfunction
 
+function! s:IsFirstCharacter(characterToCompare) abort
+	let l:rowContent           = getline('.')
+	let l:colPos               = col('.')
+	let l:firstCharacter = strpart( l:rowContent, 0, 1)
+	" echo l:firstCharacter
+	if l:firstCharacter ==# a:characterToCompare
+		return 1
+	endif
+endfunction
+
 function! s:GitHunkToggle()
 	echo "salcode GitHunkToggle"
 	if s:IsFirstCharacter('-')
@@ -55,13 +65,3 @@ function! s:GitHunkToggle()
 endfunction
 
 command! -nargs=0 GitHunkToggle call s:GitHunkToggle()
-
-function! s:IsFirstCharacter(characterToCompare) abort
-	let l:rowContent           = getline('.')
-	let l:colPos               = col('.')
-	let l:firstCharacter = strpart( l:rowContent, 0, 1)
-	" echo l:firstCharacter
-	if l:firstCharacter ==# a:characterToCompare
-		return 1
-	endif
-endfunction
