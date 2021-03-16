@@ -78,5 +78,7 @@ endfunction
 
 command! -nargs=0 GitHunkToggle call s:GitHunkToggle()
 
+nnoremap <buffer> <Space><Space> :GitHunkToggle<CR>
+
 let &cpo = s:save_cpo
 unlet s:save_cpo
