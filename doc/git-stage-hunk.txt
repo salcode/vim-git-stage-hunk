@@ -53,3 +53,5 @@ https://github.com/salcode/vim-git-stage-hunk
 LICENSE                                                *git-stage-hunk-license*
 
 Copyright (c) Sal Ferrarello. Distributed under the apache-2.0 license.
+
+ vim:tw=78:ts=8:ft=help:norl:
