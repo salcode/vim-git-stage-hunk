@@ -66,7 +66,6 @@ function! s:IsFirstCharacter(characterToCompare) abort
 endfunction
 
 function! s:GitHunkToggle()
-	echo "salcode GitHunkToggle"
 	if s:IsFirstCharacter('-')
 		call s:UnDeleteLine()
 	elseif s:IsFirstCharacter('+')
