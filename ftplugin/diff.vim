@@ -68,10 +68,12 @@ endfunction
 function! s:GitHunkToggle()
 	if s:IsFirstCharacter('-')
 		call s:UnDeleteLine()
+		normal! j
 	elseif s:IsFirstCharacter('+')
 		call s:UnAddLine()
 	elseif s:IsFirstCharacter(' ')
 		call s:DeleteLine()
+		normal! j
 	endif
 endfunction
 
