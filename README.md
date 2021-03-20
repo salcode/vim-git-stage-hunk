@@ -40,7 +40,7 @@ We can override the default mapping with a line like the following in our `.vimr
 ```
 " Map ,h to :GitHunkToggle (in normal mode),
 " default mapping in the plugin will not be applied.
-nnoremap ,h :GitHunkToggle<CR>
+nnoremap <buffer><silent> ,h :GitHunkToggle<CR>
 ```
 
 When a custom mapping like this is assigned, the default mapping is NOT set.
