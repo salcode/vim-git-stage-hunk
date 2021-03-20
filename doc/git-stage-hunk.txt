@@ -1,0 +1,55 @@
+*git-stage-hunk.txt*          A file-type plugin to help stage git diff hunks.
+
+Author: Sal Ferrarello <https://salcode.com/>
+
+|git-stage-hunk-introduction|      Introduction
+|git-stage-hunk-commands|          Commands
+|git-stage-hunk-mapping|           Mapping
+|git-stage-hunk-about|             About
+|git-stage-hunk-license|           License
+
+INTRODUCTION                     *git-stage-hunk-introduction* *git-stage-hunk*
+
+When manually staging a Git hunk, the changes are more likely to successfully
+apply when the range information of the Unified Diff Format
+(e.g. @@ -1,3 +1,9 @@) is modified.
+
+This plugin adds a command (|:GitHunkToggle|) and a normal mode mapping
+(|git-stage-hunk-mapping|) to make these modifications easier.
+
+COMMANDS *git-stage-hunk-commands*
+
+The :GitHunkToggle command behaves differently depending on the type of line
+as determined by the first character on the line
+
+- (minus) this line is marked for deletion, the command removes the deletion
+  (i.e. replaces the - with a space.
+
++ (plus) this line is marked as an addition, the command eliminates the line
+  from the hunk by removing the line entirely
+
+  (space) this line is part of the diff for reference, the command will mark
+  the line for deletion by converting the first character (space) to a minus -
+
+MAPPING *git-stage-hunk-mapping*
+
+By default the :GitHunkToggle command is mapped to <space><space>
+
+Custom Mapping~
+                                                *git-stage-hunk-custom-mapping*
+
+We can override the default mapping with a line like the following in our
+|vimrc|. This will map ,h to the :GitHunkToggle command in normal mode.
+
+nnoremap ,h :GitHunkToggle<CR>
+
+When a custom mapping like this is assigned, the default mapping is NOT set.
+
+ABOUT                                                    *git-stage-hunk-about*
+
+You can find this plugin online at
+https://github.com/salcode/vim-git-stage-hunk
+
+LICENSE                                                *git-stage-hunk-license*
+
+Copyright (c) Sal Ferrarello. Distributed under the apache-2.0 license.
