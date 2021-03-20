@@ -39,11 +39,13 @@ Custom Mapping~
                                                 *git-stage-hunk-custom-mapping*
 
 We can override the default mapping with a line like the following in our
-|vimrc|. This will map ,h to the :GitHunkToggle command in normal mode.
+|vimrc|. This will map ",h" to the :GitHunkToggle command in normal mode.>
 
-nnoremap ,h :GitHunkToggle<CR>
+  " Map ,h to :GitHunkToggle (in normal mode),
+  " default mapping in the plugin will not be applied.
+    nnoremap ,h :GitHunkToggle<CR>
+<When a custom mapping like this is assigned, the default mapping is NOT set.
 
-When a custom mapping like this is assigned, the default mapping is NOT set.
 
 ABOUT                                                    *git-stage-hunk-about*
 
