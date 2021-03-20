@@ -17,7 +17,7 @@ apply when the range information of the Unified Diff Format
 This plugin adds a command (|:GitHunkToggle|) and a normal mode mapping
 (|git-stage-hunk-mapping|) to make these modifications easier.
 
-COMMANDS *git-stage-hunk-commands*
+COMMANDS *git-stage-hunk-commands* *:GitHunkToggle*
 
 The :GitHunkToggle command behaves differently depending on the type of line
 as determined by the first character on the line
