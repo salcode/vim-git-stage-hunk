@@ -80,7 +80,7 @@ if !exists(":GitHunkToggle")
 endif
 
 if !hasmapto(':GitHunkToggle<CR>', 'n')
-	nnoremap <buffer> <Space><Space> :GitHunkToggle<CR>
+	nnoremap <buffer><silent> <Space><Space> :GitHunkToggle<CR>
 endif
 
 let &cpo = s:save_cpo
