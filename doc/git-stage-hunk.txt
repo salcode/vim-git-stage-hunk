@@ -1,4 +1,4 @@
-*git-stage-hunk.txt*          A file-type plugin to help stage git diff hunks.
+*git-stage-hunk-toc*          A file-type plugin to help stage git diff hunks.
 
 Author: Sal Ferrarello <https://salcode.com/>
 
