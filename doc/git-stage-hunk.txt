@@ -23,7 +23,7 @@ The :GitHunkToggle command behaves differently depending on the type of line
 as determined by the first character on the line
 
 - (minus) this line is marked for deletion, the command removes the deletion
-  (i.e. replaces the - with a space.
+  (i.e. replaces the - with a space)
 
 + (plus) this line is marked as an addition, the command eliminates the line
   from the hunk by removing the line entirely
