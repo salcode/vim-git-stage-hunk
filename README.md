@@ -21,6 +21,10 @@ call plug#end()
 
 When manually staging a Git hunk, the changes are more likely to successfully apply when the range information of the Unified Diff Format (e.g. `@@ -1,3 +1,9 @@`) is modified. The `:GitHunkToggle` command and the mapping that points to this command, provide shortcuts to modifying the diff and the Unified Diff Format definition line.
 
+When in are in a file with filetype `diff`, move the cursor over a line and hit `<space><space>` to toggle whether the line is part of the changes to be staged.
+
+![vim-git-stage-hunk-staging](https://user-images.githubusercontent.com/5194588/112242768-e1342600-8c22-11eb-882a-948367170964.gif)
+
 ### Command
 
 The `:GitHunkToggle` command behaves differently depending on the type of line as determined by the first character on the line
